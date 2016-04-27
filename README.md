@@ -18,3 +18,10 @@ If it is not describing it correctly, you are making life difficult for the poor
 
   Unit tests should follow the *Assign (Given)* *Act (When)* *Assert (Then)* model.
 No actions should be done after an assertion. This indicates you are doing more than one test. 
+
+**Make sure errors are caused by the unit you are testing**
+
+  When checking that an error is being thrown, make sure the error is coming from the bit you are actually testing and not in a setup step.
+If anything other than the code you are testing may throw the error you are checking, surround in try/catch blocks and throw another error instead
+
+

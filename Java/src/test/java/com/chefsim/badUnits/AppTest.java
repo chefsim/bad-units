@@ -14,4 +14,13 @@ public class AppTest {
         assertThat(true, equalTo(true));
     }
 
+    @Test(expected = NullPointerException.class)
+    public void errorThrownInAssignSteps() {
+        String assignStep = null;
+        String actStep = null;
+        assignStep.isEmpty(); // Exception is thrown here
+
+        actStep.contains("nothing");
+    }
+
 }
